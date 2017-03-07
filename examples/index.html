@@ -399,7 +399,7 @@ function run() {
  * Update forground, bird and pipes position
  */
 function update() {
-	frames++;
+	frames+= 5;
 
 	if (currentstate !== states.Score) {
 		fgpos = (fgpos - 2) % 14;
