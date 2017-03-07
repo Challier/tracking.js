@@ -258,7 +258,7 @@
             // Firefox v~30.0 gets confused with the video readyState firing an
             // erroneous HAVE_ENOUGH_DATA just before HAVE_CURRENT_DATA state,
             // hence keep trying to read it until resolved.
-            // context.drawImage(element, 0, 0, width, height);
+            context.drawImage(element, 0, 0, width, height);
           } catch (err) {}
           tracking.trackCanvasInternal_(canvas, tracker);
         }
