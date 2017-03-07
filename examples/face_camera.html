@@ -48,12 +48,6 @@
         event.data.forEach(function(rect) {
           context.fillStyle = 'yellow';
           context.fillRect(50, 320 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
-
-          context.font = '11px Helvetica';
-          var x = 50
-          var y = 320 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50)
-          context.fillText('x: ' + x + 'px', x + rect.width + 5, y + 11);
-          context.fillText('y: ' + y + 'px', x + rect.width + 5, y + 22);
         });
       });
 
