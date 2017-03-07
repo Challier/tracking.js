@@ -50,6 +50,8 @@
           context.fillStyle = 'yellow';
           context.fillRect(leftmargin, 320 * (rect.y + rect.height / 2 - 5 - minheight) / (max_height + rect.height / 2 - 5 - minheight), 10, 10);
 
+          maxheight = Math.max(maxheight, rect.height);
+          maxheight = Math.min(minheight, rect.height);
           context.font = '11px Helvetica';
           var x = rect.x + rect.width / 2
           var y = rect.y + rect.height / 2
