@@ -27,12 +27,50 @@
 	</style>
 </head>
 <body>
+
+<video id="video" width="320" height="240" preload autoplay loop muted style="opacity: 0.2;"></video>
+<canvas id="canvas" width="800" height="530"></canvas>
+
 <noscript>
 <p>For full functionality of this page it is necessary to enable JavaScript.
 Here are the <a href="http://www.enable-javascript.com/" target="_blank">
 instructions how to enable JavaScript in your web browser</a>.</p>
 </noscript>
 <script>
+
+window.onload = function() {
+      var video = document.getElementById('video');
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+
+      var tracker = new tracking.ObjectTracker('face');
+
+      tracking.track('#video', tracker, { camera: true });
+
+      tracker.on('track', function(event) {
+        event.data.forEach(function(rect) {
+
+          /*context.clearRect(0, 0, canvas.width, canvas.height);
+          context.fillStyle = 'black';
+          context.fillRect(100, 530 * (rect.y - 27) / (90 - 27), 20, 20);
+
+          context.font = '11px Helvetica';
+          context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5 + 230, rect.y + 11 + 120);
+          context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5 + 230, rect.y + 22 + 120);*/
+          console.log('Face detected!');
+          });
+
+          /*function repeatOften() {
+            // Do whatever
+            console.log('That is one call');
+            requestAnimationFrame(repeatOften);
+          };
+
+          requestAnimationFrame(repeatOften);*/
+
+        });
+};
+
 
 var
 
@@ -423,5 +461,8 @@ function render() {
 // start and run the game
 main();
 </script>
+
+
+
 </body>
 </html>
