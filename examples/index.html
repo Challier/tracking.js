@@ -330,44 +330,20 @@ function main() {
 	      tracker.on('track', function(event) {
 	        event.data.forEach(function(rect) {
 
-	          /*context.clearRect(0, 0, canvas.width, canvas.height);
+	          context.clearRect(0, 0, canvas.width, canvas.height);
 	          context.fillStyle = 'black';
-	          context.fillRect(100, 530 * (rect.y - 27) / (90 - 27), 20, 20);
+	          context.fillRect(60, 480 * (rect.y - 0) / (140 - 0), 20, 20);
 
-	          context.font = '11px Helvetica';
+	          /*context.font = '11px Helvetica';
 	          context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5 + 230, rect.y + 11 + 120);
 	          context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5 + 230, rect.y + 22 + 120);*/
 	          console.log('Face detected!');
 	          });
 
-	          /*function repeatOften() {
-	            // Do whatever
-	            console.log('That is one call');
-	            requestAnimationFrame(repeatOften);
-	          };
-
-	          requestAnimationFrame(repeatOften);*/
-
 	        });
 
 		initSprites(this);
 		ctx.fillStyle = s_bg.color;
-
-		/*var tracker = new tracking.ObjectTracker('face');
-		tracking.track('#video', tracker, { camera: true });
-
-		tracker.on('track', function(event) {
-        	event.data.forEach(function(rect) {
-
-	          /*context.clearRect(0, 0, canvas.width, canvas.height);
-	          context.fillStyle = 'black';
-	          context.fillRect(100, 530 * (rect.y - 27) / (90 - 27), 20, 20);
-
-	          context.font = '11px Helvetica';
-	          context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5 + 230, rect.y + 11 + 120);
-	          context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5 + 230, rect.y + 22 + 120);
-          	console.log('Face detected!');
-          });*/
 
 		okbtn = {
 			x: (width - s_buttons.Ok.width)/2,
@@ -389,6 +365,7 @@ function run() {
 		update();
 		render();
 		window.requestAnimationFrame(loop, canvas);
+		console.log('One more frame');
 	}
 	window.requestAnimationFrame(loop, canvas);
 }
