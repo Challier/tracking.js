@@ -41,6 +41,8 @@
       var video = document.getElementById('video');
       var canvas = document.getElementById('canvas');
       var context = canvas.getContext('2d');
+      context.canvas.width  = window.innerWidth;
+      context.canvas.height = window.innerHeight;
 
       var tracker = new tracking.ObjectTracker('face');
       var y = 265;
