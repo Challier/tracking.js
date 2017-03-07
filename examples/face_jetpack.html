@@ -7,7 +7,6 @@
 
   <script src="../build/tracking-min.js"></script>
   <script src="../build/data/face-min.js"></script>
-  <script src="../node_modules/dat.gui/build/dat.gui.min.js"></script>
   <script src="assets/stats.min.js"></script>
 </head>
 <body>
@@ -18,7 +17,7 @@
     </div>
   </div>
   <script>
-  
+
   var myTracker = new tracking.ObjectTracker('face');
 
   tracking.track('#video', myTracker, { camera: true });
