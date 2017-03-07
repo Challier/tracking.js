@@ -402,7 +402,7 @@ function update() {
 	frames++;
 
 	if (currentstate !== states.Score) {
-		fgpos = (fgpos - 2) % 2;
+		fgpos = (fgpos - 2) % 14;
 	} else {
 		// set best score to maximum score
 		best = Math.max(best, score);
