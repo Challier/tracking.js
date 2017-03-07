@@ -51,10 +51,8 @@
           context.strokeStyle = '#a64ceb';
           //context.strokeRect(rect.x + rect.width / 2, rect.y + rect.height / 2, 5, 5);
 
-          var CenterX = rect.x + rect.width / 2
-          var CenterY = rect.y + rect.height / 2
-
-          context.arc(CenterX, CenterY, radius, 0, 2 * Math.PI, false);
+          context.arc(rect.x + rect.width / 2, rect.y + rect.height / 2, radius, 0, 2 * Math.PI, false);
+          ctx.stroke();
           context.font = '11px Helvetica';
           context.fillStyle = "green";
           context.fill();
