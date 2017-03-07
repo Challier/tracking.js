@@ -27,7 +27,7 @@
       // No colors were detected in this frame.
         } else {
           event.data.forEach(function(rect) {
-            console.log('Found a face!');
+            console.log('Found a face!', rect.x, rect.y);
           });
         }
       });
