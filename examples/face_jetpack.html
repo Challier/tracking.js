@@ -45,6 +45,13 @@
         event.data.forEach(function(rect) {
           context.fillStyle = 'black';
           context.fillRect(100, 530 * (rect.y - 30) / (190 - 30), 20, 20);
+
+          context.font = '11px Helvetica';
+          var x = 150
+          var y = 530 * (rect.y - 30) / (190 - 30)
+          context.fillText('x: ' + rect.x + 'px', x + rect.width + 5, y + 11);
+          context.fillText('y: ' + rect.y + 'px', x + rect.width + 5, y + 22);
+
         });
       });
 
