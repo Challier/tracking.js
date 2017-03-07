@@ -49,11 +49,11 @@
 
         event.data.forEach(function(rect) {
           context.strokeStyle = '#a64ceb';
-          context.strokeRect(rect.x + rect.width / 2, rect.y + rect.height / 2, 5, 5);
+          //context.strokeRect(rect.x + rect.width / 2, rect.y + rect.height / 2, 5, 5);
 
           var CenterX = rect.x + rect.width / 2
           var CenterY = rect.y + rect.height / 2
-          
+
           context.arc(CenterX, CenterY, radius, 0, 2 * Math.PI, false);
           context.font = '11px Helvetica';
           context.fillStyle = "green";
