@@ -51,10 +51,10 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function(rect) {
-          context.strokeStyle=gradient;
+          context.strokeStyle = gradient;
           context.strokeRect(rect.x + rect.width / 2, rect.y + rect.height / 2, 5, 5);
           context.font = '11px Helvetica';
-          context.fillStyle = "#fff";
+          context.fillStyle = gradient;
           context.fill();
           var x = rect.x + rect.width / 2
           var y = rect.y + rect.height / 2
