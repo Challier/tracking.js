@@ -43,7 +43,6 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function(rect) {
-          console.log('Found face!', rect.x, rect.y);
           context.fillStyle = 'black';
           context.fillRect(100, 530 * (rect.y + rect.height / 2 - 5 - 47) / (176 + rect.height / 2 - 5 - 47), 10, 10);
 
