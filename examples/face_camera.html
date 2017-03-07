@@ -47,10 +47,8 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function(rect) {
-          context.strokeStyle = '#a64ceb';
-          context.strokeRect(20, rect.y + rect.height / 2, 5, 5);
-          context.fillStyle = "green";
-          context.fill();
+          context.fillStyle = 'yellow';
+          context.fillRect(rect.x + rect.width / 2, rect.y + rect.height / 2, 5, 5);
 
           context.font = '11px Helvetica';
           var x = rect.x + rect.width / 2
