@@ -16,8 +16,6 @@
     border: 2px solid black;
   }
   canvas {
-    margin-left: 115px;
-    margin-top: 60px;
     position: absolute;
     border: 2px solid black;
   }
@@ -27,7 +25,7 @@
   <div class="demo-frame">
     <div class="demo-container">
       <video id="video" width="320" height="240" preload autoplay loop muted style="opacity: 0.3;"></video>
-      <canvas id="canvas" width="640" height="480"></canvas>
+      <canvas id="canvas" width="854" height="658"></canvas>
     </div>
   </div>
   <script>
@@ -47,7 +45,7 @@
         event.data.forEach(function(rect) {
           console.log('Found face!', rect.x, rect.y);
           context.fillStyle = 'yellow';
-          context.fillRect(100, 480 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
+          context.fillRect(100, 658 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
 
           context.font = '11px Helvetica';
           var x = rect.x + rect.width / 2
