@@ -18,21 +18,21 @@
     </div>
   </div>
   <script>
-  var colors = new tracking.ColorTracker(['magenta', 'cyan', 'yellow']);
+  
+  var myTracker = new tracking.ObjectTracker('face');
 
-  tracking.track('#video', colors, { camera: true });
+  tracking.track('#video', myTracker, { camera: true });
 
-  colors.on('track', function(event) {
-    if (event.data.length === 0) {
+  myTracker.on('track', function(event) {
+        if (event.data.length === 0) {
       // No colors were detected in this frame.
-    } else {
-      event.data.forEach(function(rect) {
-        console.log(rect.x, rect.y, rect.height, rect.width, rect.color);
+        } else {
+          event.data.forEach(function(rect) {
+            console.log('Found a face!');
+          });
+        }
       });
-    }
-  });
 
-  tracking.track('#myVideo', colors);
   </script>
 </body>
 </html>
