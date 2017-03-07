@@ -55,6 +55,13 @@
         });
       });
 
+      function repeatOften() {
+        // Do whatever
+        console.log('That is one call');
+        requestAnimationFrame(repeatOften);
+      }
+      requestAnimationFrame(repeatOften);
+
       /*var gui = new dat.GUI();
       gui.add(tracker, 'edgesDensity', 0.1, 0.5).step(0.01);
       gui.add(tracker, 'initialScale', 1.0, 10.0).step(0.1);
