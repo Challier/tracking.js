@@ -31,6 +31,7 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function(rect) {
+          console.log('Found face!', rect.x, rect.y);
           context.fillStyle = 'yellow';
           context.fillRect(50, 320 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
 
