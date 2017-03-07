@@ -48,7 +48,7 @@
 
         event.data.forEach(function(rect) {
           context.fillStyle = 'yellow';
-          context.fillRect(leftmargin, 120 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
+          context.fillRect(leftmargin, 120 * (rect.y + rect.height / 2 - 5 - 30) / (85 + rect.height / 2 - 5 - 30), 10, 10);
 
           maxheight = Math.max(maxheight, rect.height);
           minheight = Math.min(minheight, rect.height);
