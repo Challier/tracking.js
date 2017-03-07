@@ -36,12 +36,12 @@
       var canvas = document.getElementById('canvas');
       var context = canvas.getContext('2d');
 
-      var tracker = new tracking.ObjectTracker('face');
+      var tracker = new tracking.ObjectTracker('mouth');
       tracker.setInitialScale(4);
       tracker.setStepSize(2);
       tracker.setEdgesDensity(0.1);
 
-      tracking.track('#video', tracker, { camera: false });
+      tracking.track('#video', tracker, { camera: true });
 
       tracker.on('track', function(event) {
         context.clearRect(0, 0, canvas.width, canvas.height);
@@ -58,8 +58,8 @@
         });
       });
 
-      var gui = new dat.GUI();
-      /*gui.add(tracker, 'edgesDensity', 0.1, 0.5).step(0.01);
+      /*var gui = new dat.GUI();
+      gui.add(tracker, 'edgesDensity', 0.1, 0.5).step(0.01);
       gui.add(tracker, 'initialScale', 1.0, 10.0).step(0.1);
       gui.add(tracker, 'stepSize', 1, 5).step(0.1);*/
     };
