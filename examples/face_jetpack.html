@@ -44,7 +44,7 @@
 
         event.data.forEach(function(rect) {
           context.fillStyle = 'black';
-          context.fillRect(100, 530 * (rect.y + rect.height / 2 - 5 - 30) / (90 + rect.height / 2 - 5 - 30), 10, 10);
+          context.fillRect(100, 530 * (rect.y - 30) / (90 - 30), 20, 20);
 
           context.font = '11px Helvetica';
           var x = rect.x + rect.width / 2
