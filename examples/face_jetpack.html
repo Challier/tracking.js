@@ -23,13 +23,9 @@
   tracking.track('#video', myTracker, { camera: true });
 
   myTracker.on('track', function(event) {
-        if (event.data.length === 0) {
-      // No colors were detected in this frame.
-        } else {
           event.data.forEach(function(rect) {
             console.log('Found a face!', rect.x, rect.y);
           });
-        }
       });
 
   </script>
