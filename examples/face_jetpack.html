@@ -9,10 +9,16 @@
   <script src="../build/data/face-min.js"></script>
   <script src="assets/stats.min.js"></script>
   <style>
-  video, canvas {
+  video{
     margin-left: 230px;
     margin-top: 120px;
     position: absolute;
+  }
+  canvas {
+    margin-left: 115px;
+    margin-top: 60px;
+    position: absolute;
+    border-color: black;
   }
   </style>
 </head>
@@ -40,7 +46,7 @@
         event.data.forEach(function(rect) {
           console.log('Found face!', rect.x, rect.y);
           context.fillStyle = 'yellow';
-          context.fillRect(50, 320 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
+          context.fillRect(100, 480 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
 
           context.font = '11px Helvetica';
           var x = rect.x + rect.width / 2
