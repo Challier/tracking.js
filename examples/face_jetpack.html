@@ -55,7 +55,6 @@
       tracker.on('track', function(event) {
 
         event.data.forEach(function(rect) {
-          context.clearRect(0, 0, canvas.width, canvas.height);
           context.fillStyle = 'black';
           context.fillRect(100, 530 * (rect.y - 27) / (90 - 27), 20, 20);
 
