@@ -35,6 +35,10 @@
       var video = document.getElementById('video');
       var canvas = document.getElementById('canvas');
       var context = canvas.getContext('2d');
+      var gradient=ctx.createLinearGradient(0,0,170,0);
+      gradient.addColorStop("0","magenta");
+      gradient.addColorStop("0.5","blue");
+      gradient.addColorStop("1.0","red");
 
       var tracker = new tracking.ObjectTracker('face');
       tracker.setInitialScale(4);
@@ -47,7 +51,7 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function(rect) {
-          context.strokeStyle = '#a64ceb';
+          context.strokeStyle=gradient;
           context.strokeRect(rect.x + rect.width / 2, rect.y + rect.height / 2, 5, 5);
           context.font = '11px Helvetica';
           context.fillStyle = "#fff";
