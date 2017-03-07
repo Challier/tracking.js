@@ -44,8 +44,8 @@
 
         event.data.forEach(function(rect) {
           console.log('Found face!', rect.x, rect.y);
-          context.fillStyle = 'yellow';
-          context.fillRect(100, 530 * (rect.y + rect.height / 2 - 5 - 50) / (180 + rect.height / 2 - 5 - 50), 10, 10);
+          context.fillStyle = 'black';
+          context.fillRect(100, 530 * (rect.y + rect.height / 2 - 5 - 50) / (194 + rect.height / 2 - 5 - 50), 10, 10);
 
           context.font = '11px Helvetica';
           var x = rect.x + rect.width / 2
